@@ -19,7 +19,7 @@ export default function Header() {
           </Link>
           <div className="grid gap-2 py-6">
             <Link
-              href="#"
+              href="/"
               className="flex w-full items-center py-2 text-lg font-semibold"
               prefetch={false}
             >
@@ -68,7 +68,7 @@ export default function Header() {
         <ul className="flex gap-4">
           <li>
             <Link
-              href="#"
+              href="/"
               className="inline-flex h-9 items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50"
               prefetch={false}
             >
@@ -122,8 +122,12 @@ export default function Header() {
             className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
           />
         </div>
-        <Button variant="outline">Sign In</Button>
-        <Button>Sign Up</Button>
+        <Link href="/login">
+          <Button variant="outline">Sign In</Button>
+        </Link>
+        <Link href="/signup">
+          <Button>Sign Up</Button>
+        </Link>
       </div>
     </header>
   );
